@@ -11,8 +11,15 @@ git config --global user.email "dpetroff@gmail.com"
 git config --global user.name "Dmitry Petrov"
 git config --global core.editor vim
 
-pushd $SCRIPT_DIR
+echo "Setting up symlinks"
 
-ln -s "$SCRIPT_DIR/bash_aliases" ~/.bash_aliases
+pushd $SCRIPT_DIR > /dev/null
 
-popd
+if [ -e ~/.bash_aliases ]
+then
+  echo "~/.bash_aliases file already exists, symlink will not be created"
+else
+  ln -s "$SCRIPT_DIR/bash_aliases" ~/.bash_aliases
+fi
+
+popd > /dev/null
