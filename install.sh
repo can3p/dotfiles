@@ -11,6 +11,7 @@ echo "Setting up git config"
 git config --global user.email "dpetroff@gmail.com"
 git config --global user.name "Dmitry Petrov"
 git config --global core.editor vim
+git config --global push.default simple
 
 echo "Setting up symlinks"
 
