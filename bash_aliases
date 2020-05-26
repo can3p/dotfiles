@@ -1,6 +1,0 @@
-alias gs='git status'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gr='git grep'
-alias gpp='git pull && git push'

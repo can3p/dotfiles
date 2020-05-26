@@ -3,8 +3,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo "Installing common packages"
-sudo apt-get install vim git curl jq tmux tig
-# clipboard doesn't work? Try installing vim-gtk3 instead
+sudo apt-get install vim-gtk3 git curl jq tmux tig
 
 echo "Setting up git config"
 
@@ -15,13 +14,14 @@ git config --global push.default simple
 
 echo "Setting up symlinks"
 
-pushd $SCRIPT_DIR > /dev/null
-
-if [ -e ~/.bash_aliases ]
-then
-  echo "~/.bash_aliases file already exists, symlink will not be created"
+if [[ -e "$HOME/.zshrc" ]]; then
+  echo "$HOME/.zshrc already exists, remove to use this one"
 else
-  ln -s "$SCRIPT_DIR/bash_aliases" ~/.bash_aliases
+  ln -s $SCRIPT_DIR/zshrc $HOME/.zshrc
 fi
 
-popd > /dev/null
+if [[ -e "$HOME/.tmux.conf" ]]; then
+  echo "$HOME/.tmux.conf already exists, remove to use this one"
+else
+  ln -s $SCRIPT_DIR/tmux.conf $HOME/.tmux.conf
+fi
