@@ -12,6 +12,7 @@ git config --global user.name "Dmitry Petrov"
 git config --global core.editor vim
 git config --global push.default simple
 git config --global core.pager cat
+git config --global pager.log "less -S"
 
 echo "Setting up symlinks"
 
