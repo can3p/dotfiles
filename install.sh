@@ -27,3 +27,9 @@ if [[ -e "$HOME/.tmux.conf" ]]; then
 else
   ln -s $SCRIPT_DIR/tmux.conf $HOME/.tmux.conf
 fi
+
+if [[ -e "$HOME/.bash_aliases" ]]; then
+  echo "$HOME/.bash_aliases already exists, remove to use this one"
+else
+  ln -s $SCRIPT_DIR/bash_aliases $HOME/.bash_aliases
+fi
