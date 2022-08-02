@@ -118,3 +118,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# open all files affected by a commit
+function vcommit(){
+    vim $(git diff-tree --no-commit-id --name-only -r $1)
+}
+
+# random ls colors from https://superuser.com/questions/528228/how-can-i-configure-the-color-of-ls-directory-under-zsh
+LSCOLORS=ExGxBxDxCxEgEdxbxgxcxd
+
+# it's handy to see when a command was executed
+RPROMPT="[%D{%y-%m-%f}|%@]"
