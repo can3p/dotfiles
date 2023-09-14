@@ -115,10 +115,6 @@ alias gpp="git pull --rebase && git push"
 
 source $HOME/.local_zshrc
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # open all files affected by a commit
 function vcommit(){
     vim $(git diff-tree --no-commit-id --name-only -r $1)
