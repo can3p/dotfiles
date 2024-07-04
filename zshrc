@@ -78,6 +78,7 @@ plugins=(
    aws
    docker
    fzf
+   asdf
 )
 
 source $ZSH/oh-my-zsh.sh

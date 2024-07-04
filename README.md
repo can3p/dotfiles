@@ -18,6 +18,12 @@ Install zsh second: https://ohmyz.sh/
 Third - change terminal font djvu sans mono
 or status line will miss icons
 
+Install asdf as well
+
+```
+brew install asdf
+```
+
 ## Installation
 
 1. `git clone https://github.com/can3p/dotfiles.git ~/.dotfiles`
