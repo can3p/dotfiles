@@ -113,6 +113,8 @@ alias tree='tree -a -I .git --dirsfirst'
 alias w='watchexec --clear --restart -i ".*" -i "*.md" -i Dockerfile --'
 alias pull="git pull --rebase"
 alias gpp="git pull --rebase && git push"
+alias gsync='git fetch --prune && LC_ALL=C git pull && LC_ALL=C git branch -vv | grep -E "\\[.*: gone\\]" | sed "s/^[* ]*//" | awk "{print \$1}" | xargs -r git branch -D'
+
 
 source $HOME/.local_zshrc
 
