@@ -13,7 +13,7 @@ unsetopt share_history
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -55,7 +55,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -74,7 +74,7 @@ DISABLE_MAGIC_FUNCTIONS=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-   git
+   gitfast
    aws
    docker
    fzf
@@ -106,7 +106,7 @@ export EDITOR='vim'
 alias gs="git status"
 alias gc="git commit"
 alias gca="git commit -a"
-alias gr="git grep -n"
+alias gr="git --no-pager grep -n"
 alias gd='git diff'
 alias glmy='git log --author dima'
 alias tree='tree -a -I .git --dirsfirst'
