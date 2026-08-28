@@ -24,6 +24,12 @@ Install asdf as well
 brew install asdf
 ```
 
+Install fzf as well, it's used by the `git ci` alias:
+
+```
+brew install fzf
+```
+
 ## Installation
 
 1. `git clone https://github.com/can3p/dotfiles.git ~/.dotfiles`
